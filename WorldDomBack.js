@@ -70,9 +70,9 @@ class country {
     isSpare = true
     budget = 500
     avWealth
-    nuclearTech = true ////////////////////////////////////////////////////////////////
+    nuclearTech = false ////////////////////////////////////////////////////////////////
     end_ROUND = false
-    nukeBalls = 4///////////////
+    nukeBalls = 0///////////////
     city_ = []
     sanction = []
     foreignP = []
@@ -673,3 +673,4 @@ const server = http.createServer((request, response) => {
 }).listen(2230, "127.0.0.1");
 
 const IP_LOC = 'http://3.85.193.131/'
+
