@@ -38,7 +38,7 @@ class city {
         return this.income
     }
     getWealth() {
-        this.wealth = Math.round(((3*this.economic + 2*ecology)/5)*100)/100
+        this.wealth = Math.round((((3*this.economic + 2*ecology)/5)*100)/100)
         return this.wealth  
     }
 
@@ -673,5 +673,6 @@ const server = http.createServer((request, response) => {
 }).listen(2230, "127.0.0.1");
 
 const IP_LOC = 'http://3.85.193.131/'
+
 
 
