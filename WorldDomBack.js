@@ -22,7 +22,7 @@ class city {
     constructor(name, economic, shield) {
         this.name = name
         this.economic = economic
-        this.wealth = (3*this.economic + 2*ecology)/5
+        this.wealth = Math.round((3*this.economic + 2*ecology)/5)
         this.shield = shield
         this.income = Math.round(CONSTincome*this.wealth)
     }
@@ -673,4 +673,5 @@ const server = http.createServer((request, response) => {
 }).listen(2230, "127.0.0.1");
 
 const IP_LOC = 'http://3.85.193.131/'
+
 
