@@ -534,14 +534,14 @@ function insane(data, request)
                         }
                         else
                             response.writeHead(302, {
-                                'Location': 'http://57.128.222.214/WD/index.html'
+                                'Location': IP_LOC
                                 //add other headers here...
                             });
                         response.end();
                     }
                     else
                         response.writeHead(404, {
-                            'Location': 'http://57.128.222.214/WD/index.html'
+                            'Location': IP_LOC
                             //add other headers here...
                         });
                     break;
@@ -550,14 +550,14 @@ function insane(data, request)
                     for (let i = 0; i < countCounties; i++) {
                         if (method_i(body) == country_[i].invite && !country_[i].isSpare) {
                             response.writeHead(200, {
-                                'Location': 'http://57.128.222.214/WD/index.html'
+                                'Location': IP_LOC
                             })
                             response.end()
                             break;
                         }
                     }
                     response.writeHead(302, {
-                        'Location': 'http://57.128.222.214/WD/index.html'
+                        'Location': IP_LOC
                     })
                     response.end()
                     break;
@@ -573,7 +573,7 @@ function insane(data, request)
                         }
                     }
                     response.writeHead(404, {
-                        'Location': 'http://57.128.222.214/WD/index.html'
+                        'Location': IP_LOC
                     });
                     response.end();
                     break;
@@ -583,7 +583,7 @@ function insane(data, request)
                     if(!alive)
                     {
                         response.writeHead(302, {
-                            'Location': 'http://57.128.222.214/WD/index.html'
+                            'Location': IP_LOC
                         });
                     }
                     else if(year == countYear)
@@ -599,7 +599,7 @@ function insane(data, request)
                 default: {
                     console.log(body)
                     response.writeHead(404, {
-                        'Location': 'http://57.128.222.214/WD/index.html'
+                        'Location': IP_LOC
                     });
                     response.end();
                 }
@@ -608,7 +608,7 @@ function insane(data, request)
         }
         else {
             response.writeHead(404, {
-                'Location': 'http://57.128.222.214/WD/index.html'
+                'Location': IP_LOC
             });
             response.end();
         }
@@ -657,7 +657,7 @@ const server = http.createServer((request, response) => {
         let tempRound = proc.nextRound()
         if( tempRound != 0){
             response.writeHead(404, {
-                'Location': 'http://57.128.222.214/WD/index.html'
+                'Location': IP_LOC
             });
             response.end();
         }
@@ -672,4 +672,4 @@ const server = http.createServer((request, response) => {
 
 }).listen(2230, "127.0.0.1");
 
-
+const IP_LOC = 'http://3.85.193.131/'
